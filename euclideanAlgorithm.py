@@ -94,6 +94,14 @@ def bezout(ls):
         temp = u
         u = v
         v = temp
-    return u, v
+    return (u, v)
         
- 
+def print_html(ls, bez):
+    f = open("templates/output.html", "w")
+    text = ""
+    for l in ls:
+        text += f"<ul>{l}</ul>\n"
+    text += f"In Bezout Identity form: {ls[len(ls)-2].r} = {bez[0]}*{ls[0].a} + {bez[1]}*{ls[0].b}"
+    text = text.replace("j", "i")
+    f.write(text)
+    f.close()

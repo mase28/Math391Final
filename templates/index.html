@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body%}
+<h1>Math 391 Final Project</h1>
+<h4>Extended Euclidean Algorithm</h4>
+<p>This program uses the Extended Euclidean Algorithm to find the Greatest Common
+    Factor amongst two Integers, or Guassian Integers, and then uses that to express
+    the gcd in Bezout's Identity. Select either Integers or Gaussian to get started.
+</p>
+<form action= "{{ url_for('integer') }}">
+    <button type="submit">Integer</button>
+</form>
+<form action= "{{ url_for('gaussian') }}">
+    <button type="submit">Gaussian</button>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body%}
+<h2>Extended Euclidean Algorithm for Gaussian Integers in Z[i]</h2>
+<form method="post" action="{{ url_for('gaussian') }}">
+    <label for="first_real">Enter First Number:</label>
+    <input type="number" name="first_real" id="first_real">
+    <label for="first_real"> + </label>
+    <input type="number" name="first_imag" id="first_imag">
+    <label for="first_imag">i</label>
+    <br>
+    <label for="second_real">Enter Second Number:</label>
+    <input type="number" name="second_real" id="second_real">
+    <label for="second_real"> + </label>
+    <input type="number" name="second_imag" id="second_imag">
+    <label for="second_imag">i</label>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

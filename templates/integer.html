@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body%}
+<h2>Extended Euclidean Algorithm for Integers in Z</h2>
+<form method="post" action="{{ url_for('integer') }}">
+    <label for="first">Enter First Number:</label>
+    <input type="number" name="first" id="first">
+    <br>
+    <label for="second">Enter Second Number:</label>
+    <input type="number" name="second" id="second">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
